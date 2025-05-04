@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="am">
 <head>
     <meta charset="UTF-8">
@@ -11,19 +11,126 @@
     <!-- Google Fonts - Noto Sans Ethiopic -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --nat-color: #3498db;
+            --soc-color: #9b59b6;
+            --eng-color: #3498db;
+            --sci-color: #2ecc71;
+        }
+
         body {
             font-family: 'Noto Sans Ethiopic', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            color: #333;
+            overflow-x: hidden;
             line-height: 1.8;
         }
+
         .hero-section {
             background: linear-gradient(135deg, #2c3e50, #3498db);
         }
+
         .course-badge {
             font-size: 0.8rem;
         }
+
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .split {
+            flex: 1 1 50%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
         .ethio-flag-colors {
             background: linear-gradient(to right, #078930 33%, #fcdd09 33% 66%, #da121a 66%);
             height: 5px;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-card, .category-card {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            padding: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .course-card:hover, .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-link {
+            display: block;
+            padding: 30px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-link::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-explore {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 8px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-explore:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .nat-sci { background: linear-gradient(135deg, var(--nat-color) 0%, #2980b9 100%); }
+        .soc-sci { background: linear-gradient(135deg, var(--soc-color) 0%, #8e44ad 100%); }
+        .pre-eng { background: linear-gradient(135deg, var(--eng-color) 0%, #2980b9 100%); }
+        .other-sci { background: linear-gradient(135deg, var(--sci-color) 0%, #27ae60 100%); }
+
+        @media (max-width: 992px) {
+            .split {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -67,8 +174,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="fw-bold mb-4">ስለ A+ Tutorial Class</h2>
-                    <p class="mb-4">📚 A+ Tutorial class በአዲሱ የከፍተኛ ትምህርት ፍኖተ ካርታ መሰረት በተፈጥሮ ና በማህበራዊ ሳይንስ ለተመደቡ የከፍተኛ ትምህርት ተቋማት ተማሪዎች የሚወስዱትን የመጀመሪያ አመት ኮርሶችን በማስተማር ተማሪዎች ከፍተኛ ውጤት አምጥተው ወደሚፈልጉት የትምህርት መስክ እንዲቀላቀሉ ለማድረግ በ2013 ዓ.ም የተመሰረተ ነው።</p>
-                    <p class="mb-4">📚 ይህ Tutorial Class እስካሁን በነበረው የማስተማር ሒደት በሺህ የሚቆጠሩ ተማሪዎች ዘንድ ተመራጭ እና ብዙዎች ከፍተኛ ውጤት አምጥተው ወደ ሚፈልጉት ዲፓርትመንት እንዲቀላቀሉ አስተዋፆው ከፍ ያለ ነበር።</p>
+                    <p class="mb-4">📚 A+ Tutorial class በአዲሱ የከፍተኛ ትምህርት ፍኖተ ካርታ መሰረት በተፈጥሮ �ና በማህበራዊ ሳይንስ ለተመደቡ የከፍተኛ ትምህርት ተቋማት ተማሪዎች የሚወስዱትን የመጀመሪያ አመት ኮርሶችን በማስተማር ተማሪዎች ከፍተኛ ውጤት አምጥተው ወደሚፈልጉት የትምህርት መስክ እንዲቀላቀሉ ለማድረግ በ2013 ዓ.ም የተመሰረተ ነው።</p>
+                    <p class="mb-4">📚 ይህ Tutorial Class እስካሁን በነበረው የማስተማር ሒደት በሺህ የሚቆጠሩ ተማሪዎች ዘንድ ተመራጭ እና ብዙዎች ከፍተኛ ውጤት አምጥተው ወደ ሚፈልጉት �ዲፓርትመንት እንዲቀላቀሉ አስተዋፆው ከፍ ያለ ነበር።</p>
                     <p>📚 ተመዝግባችሁ ስለተቀላቀላችሁን ክብር ይሰማናል። በአብሮነታችን መልካም ቆይታን እንመኛለን።</p>
                 </div>
                 <div class="col-lg-6">
@@ -84,38 +191,59 @@
             <h2 class="text-center fw-bold mb-5">የምንሰጣቸው ኮርሶች <i class="fas fa-book-open ms-2"></i></h2>
             <div class="row g-4">
                 <!-- Course Cards -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-primary">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="mb-0">Applied Math I</h5>
+                <div class="split-container">
+                    <div class="split bg-light">
+                        <div class="section-header">
+                            <h2><i class="fas fa-book-reader me-2"></i>First Semester</h2>
+                            <p class="lead">Foundation courses for your academic journey</p>
                         </div>
-                        <div class="card-body">
-                            <p>የተፈጥሮ ሳይንስ ተማሪዎች የሚወስዱት የመጀመሪያ ደረጃ የሂሳብ ኮርስ</p>
-                            <span class="badge bg-primary course-badge">ተፈጥሯዊ ሳይንስ</span>
+                        <div class="course-card">
+                            <a href="natural-science.html" class="card-link nat-sci">
+                                <div class="card-icon"><i class="fas fa-atom"></i></div>
+                                <h3 class="card-title">Natural Science</h3>
+                                <p class="card-desc">Mathematics, Physics, Chemistry, and Biology</p>
+                                <span class="btn-explore">View Courses</span>
+                            </a>
+                        </div>
+                        <div class="course-card">
+                            <a href="social-science.html" class="card-link soc-sci">
+                                <div class="card-icon"><i class="fas fa-users"></i></div>
+                                <h3 class="card-title">Social Science</h3>
+                                <p class="card-desc">Anthropology, Economics, Geography, Sociology</p>
+                                <span class="btn-explore">View Courses</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card h-100 border-success">
-                        <div class="card-header bg-success text-white">
-                            <h5 class="mb-0">Economics</h5>
+
+                    <!-- Second Semester -->
+                    <div class="split bg-white">
+                        <div class="section-header">
+                            <h2><i class="fas fa-book-open me-2"></i>Second Semester</h2>
+                            <p class="lead">Specialized tracks to continue your studies</p>
                         </div>
-                        <div class="card-body">
-                            <p>የማኅበራዊ ሳይንስ ተማሪዎች የሚወስዱት መሰረታዊ የኢኮኖሚክስ ኮርስ</p>
-                            <span class="badge bg-success course-badge">ማኅበራዊ ሳይንስ</span>
+                        <div class="category-card">
+                            <a href="pre-engineering.html" class="card-link pre-eng">
+                                <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                                <h3 class="card-title">Pre-Engineering</h3>
+                                <p class="card-desc">Math, Physics, and Engineering fundamentals</p>
+                                <span class="btn-explore">Explore Courses</span>
+                            </a>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card h-100 border-info">
-                        <div class="card-header bg-info text-white">
-                            <h5 class="mb-0">Computer Programming</h5>
+                        <div class="category-card">
+                            <a href="other-science.html" class="card-link other-sci">
+                                <div class="card-icon"><i class="fas fa-flask"></i></div>
+                                <h3 class="card-title">Other Sciences</h3>
+                                <p class="card-desc">Biology, Chemistry, and Natural Sciences</p>
+                                <span class="btn-explore">Explore Courses</span>
+                            </a>
                         </div>
-                        <div class="card-body">
-                            <p>የኮምፒውተር ፕሮግራሚንግ መሰረታዊ ፅንሰ-ሀሳቦች እና ተግባራት</p>
-                            <span class="badge bg-info course-badge">ሁለንተናዊ</span>
+                        <div class="category-card">
+                            <a href="social-science.html" class="card-link soc-sci">
+                                <div class="card-icon"><i class="fas fa-users"></i></div>
+                                <h3 class="card-title">Social Sciences</h3>
+                                <p class="card-desc">Anthropology, Economics, and Social Studies</p>
+                                <span class="btn-explore">Explore Courses</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +298,6 @@
         <div class="container py-4">
             <h2 class="mb-4">ስኬትዎ ከA+ ጋር የተረጋገጠ ነው!</h2>
             <p class="lead mb-4">ቲቶርያሉን ከነገ ጀምሮ መልቀቅ እንጀምራለን። !</p>
-          
         </div>
     </section>
 
