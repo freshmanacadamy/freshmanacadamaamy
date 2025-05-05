@@ -1,17 +1,15 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="am">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 1: Introduction to C++ | Freshman Academy</title>
+    <title>Chapter 1: Introduction to Programming | Freshman Academy</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts - Noto Sans Ethiopic -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Highlight.js for code syntax -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <style>
         :root {
             --primary-color: #3498db;
@@ -68,12 +66,18 @@
             margin-bottom: 1.5rem;
         }
 
-        .code-example {
-            background: #282c34;
+        .note-section {
+            background-color: #f8f9fa;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1.5rem 0;
-            overflow-x: auto;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .note-title {
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
         }
 
         .btn-primary {
@@ -93,10 +97,9 @@
             margin-top: 3rem;
         }
 
-        pre {
-            border-radius: 8px;
-            padding: 1rem;
-            background: #282c34 !important;
+        .next-btn-container {
+            text-align: right;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -116,7 +119,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../computer-programming.html">Back to C++ Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../computer-programming.html">Back to Course</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                 </ul>
             </div>
@@ -126,8 +129,8 @@
     <!-- Chapter Header -->
     <section class="chapter-header">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3"><i class="fas fa-file-code me-3"></i>Chapter 1: Introduction to C++</h1>
-            <p class="lead">Fundamentals of C++ programming language</p>
+            <h1 class="display-4 fw-bold mb-3"><i class="fas fa-file-code me-3"></i>Chapter 1: Introduction to Programming</h1>
+            <p class="lead">Fundamentals of computer programming</p>
         </div>
     </section>
 
@@ -135,217 +138,240 @@
     <section class="py-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="content-card">
-                        <div class="topic-card">
-                            <h2 class="topic-title">1.1 What is C++?</h2>
-                            <p>C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language. It is widely used for system/application software, game development, drivers, and embedded systems.</p>
+                        <div class="note-section">
+                            <h3 class="note-title">Chapter One - Introduction</h3>
                             
-                            <h5 class="mt-4">Key Features:</h5>
+                            <h5>What is programming?</h5>
+                            <p>Programming is a skill that can be acquired by a computer professional that gives him/her the knowledge of making the computer perform the required operation or task.</p>
+                            
+                            <h5>Why do we need to learn computer programming?</h5>
+                            <p>Computer programming is critical if one wants to know how to make the computer perform a task. Most users of a computer only use the available applications on the computer. These applications are produced by computer programmers. Thus if someone is interested to make such kind of applications, he/she needs to learn how to talk to the computer, which is learning computer programming.</p>
+                            
+                            <h5>What is programming language?</h5>
+                            <p>Programming Language: is a set different category of written symbols that instruct computer hardware to perform specified operations required by the designer.</p>
+                            
+                            <h5>What skills do we need to be a programmer?</h5>
+                            <p>For someone to be a programmer, in addition to basic skills in computer, needs to have the following major skills:</p>
                             <ul>
-                                <li>Object-oriented programming support</li>
-                                <li>High performance and efficiency</li>
-                                <li>Rich standard library (STL)</li>
-                                <li>Memory management control</li>
-                                <li>Cross-platform development</li>
+                                <li><strong>Programming Language Skill:</strong> knowing one or more programming language to talk to the computer and instruct the machine to perform a task.</li>
+                                <li><strong>Problem Solving Skill:</strong> skills on how to solve real world problem and represent the solution in understandable format.</li>
+                                <li><strong>Algorithm Development:</strong> skill of coming up with sequence of simple and human understandable set of instructions showing the step of solving the problem. Those set of steps should not be dependent on any programming language or machine.</li>
+                            </ul>
+                            <p>In every programming Language there are sets of rules that govern the symbols used in a programming language. These set of rules determine how the programmer can make the computer hardware to perform a specific operation. These sets of rules are called syntax.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.1. Generations of programming language</h3>
+                            <p>Programming languages are categorized into five generations: (1st, 2nd, 3rd, 4th and 5th generation languages)</p>
+                            <p>These programming languages can also be categorized into two broad categories: low level and high level languages.</p>
+                            <ul>
+                                <li>Low level languages are machine specific or dependent.</li>
+                                <li>High level languages like COBOL, BASIC are machine independent and can run on variety of computers.</li>
+                            </ul>
+                            <p>From the five categories of programming languages, first and second generation languages are low level languages and the rest are high level programming languages.</p>
+                            <p>The higher the level of a language, the easier it is to understand and use by programmers.</p>
+                            <p>Languages after the forth generation are refereed to as a very high level languages.</p>
+                            
+                            <h5>1.1.1. First Generation (Machine languages, 1940's):</h5>
+                            <ul>
+                                <li>Difficult to write applications with.</li>
+                                <li>Dependent on machine languages of the specific computer being used.</li>
+                                <li>Machine languages allow the programmer to interact directly with the hardware, and it can be executed by the computer without the need for a translator.</li>
+                                <li>Is more powerful in utilizing resources of the computer.</li>
+                                <li>Gives power to the programmer.</li>
+                                <li>They execute very quickly and use memory very efficiently.</li>
+                            </ul>
+                            
+                            <h5>1.1.2. Second Generation (Assembly languages, early 1950's):</h5>
+                            <ul>
+                                <li>Uses symbolic names for operations and storage locations.</li>
+                                <li>A system program called an assembler translates a program written in assembly language to machine language.</li>
+                                <li>Programs written in assembly language are not portable. i.e., different computer architectures have their own machine and assembly languages.</li>
+                                <li>They are highly used in system software development.</li>
+                            </ul>
+                            
+                            <h5>1.1.3. Third Generation (High level languages, 1950's to 1970's):</h5>
+                            <ul>
+                                <li>Uses English like instructions and mathematicians were able to define variables with statements such as Z = A + B</li>
+                                <li>Such languages are much easier to use than assembly language.</li>
+                                <li>Programs written in high level languages need to be translated into machine language in order to be executed.</li>
+                                <li>The use of common words (reserved words) within instructions makes them easier to learn.</li>
+                                <li>All third generation programming languages are procedural languages.</li>
+                                <li>In procedural languages, the programmer is expected to specify what is required and how to perform it.</li>
+                            </ul>
+                            
+                            <h5>1.1.4. Fourth Generation (since late 1970's):</h5>
+                            <ul>
+                                <li>Have a simple, English like syntax rules; commonly used to access databases.</li>
+                                <li>Forth generation languages are non-procedural languages.</li>
+                                <li>The non-procedural method is easier to write, but you have less control over how each task is actually performed.</li>
+                                <li>In non-procedural languages the programmer is not required to write traditional programming logic. Programmers concentrate on defining the input and output rather than the program steps required.</li>
+                                <li>For example, a command, such as LIST, might display all the records in a file on screen, separating fields with a blank space. In a procedural language, all the logic for inputting each record, testing for end of file and formatting each column on screen has to be explicitly programmed.</li>
+                                <li>Forth generation languages have a minimum number of syntax rules. This saves time and free professional programmers for more complex tasks.</li>
+                                <li>Some examples of 4GL are structured query languages (SQL), report generators, application generators and graphics languages.</li>
+                            </ul>
+                            
+                            <h5>1.1.5. Fifth Generation (1990's):</h5>
+                            <ul>
+                                <li>These are used in artificial intelligence (AI) and expert systems; also used for accessing databases.</li>
+                                <li>5GLs are "natural" languages whose instruction closely resembles human speech. E.g. "get me Jone Brown's sales figure for the 1997 financial year".</li>
+                                <li>5GLs require very powerful hardware and software because of the complexity involved in interpreting commands in human language.</li>
+                                  <h3 class="note-title">1.2. Overview of Computers and Computer Organization</h3>
+                            <p>Regardless of differences in physical appearance, virtually every computer may be envisioned as being divided into six logical units or sections:</p>
+                            
+                            <img src="https://via.placeholder.com/600x400?text=Computer+Organization+Diagram" alt="Computer Organization Diagram" class="unit-diagram">
+                            
+                            <h5>Input Unit:</h5>
+                            <p>It obtains information from various input devices and places this information at the disposal of the other units so that the information may be processed or stored.</p>
+                            
+                            <h5>Output Unit:</h5>
+                            <p>It takes information that has been processed by the computer and places it on various output devices to make the information available for use outside the computer.</p>
+                            
+                            <h5>Memory unit:</h5>
+                            <p>It retains information that has been entered through the input unit, so the information may be made immediately available for processing when it is needed. The memory unit also retains processed information until that information can be placed on output devices by the output unit.</p>
+                            
+                            <h5>Central Processing Unit (CPU):</h5>
+                            <p>It is the computer's coordinator and is responsible for supervising the operations of the other sections. CPU tells the input unit when information should be read into memory, tells ALU when information from the memory should be used in calculation and tells output unit when to send information from the memory to certain output devices.</p>
+                            
+                            <h5>Arithmetic and Logic unit:</h5>
+                            <p>Is a part found inside the Central Processing Unit and is responsible for performing calculations such as addition, subtraction, multiplication and division. It also performs comparisons.</p>
+                            
+                            <h5>Secondary Storage device:</h5>
+                            <p>Programs or data used by other units normally are placed on secondary storage devices (such as disks) until they are needed, possibly hours, days, months, or even years later.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.3. The evolution of Operating Systems</h3>
+                            <p>Early computers were capable of performing only one job at a time. This form of computer operation is often called single-user batch processing. The computer runs a single program at a time while processing data in groups or batches.</p>
+                            
+                            <p>As computers became more powerful, it became evident that single-user batch processing rarely utilizes the computer's resources.</p>
+                            
+                            <p>Therefore, computer developers thought that many jobs or tasks from different programs or applications could be made to share the resources of the computer to achieve better utilization. This concept is called multiprogramming.</p>
+                            
+                            <p>Multiprogramming involving the "simultaneous" operation of many jobs on the computer.</p>
+                            
+                            <p>In the 1960's, many groups, pioneered timesharing operating systems.</p>
+                            
+                            <p>Timesharing is a special case of multiprogramming, in which users access the computers through terminals. Here, the computer does not run the users job paralleling, but shares the CPU's time.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.4. Major Programming Paradigms</h3>
+                            <p>The major land marks in the programming world are the different kinds of features or properties observed in the development of programming languages. Among these the following are worth mentioning: Procedural, Structured and Object Oriented Programming Paradigms.</p>
+                            
+                            <h5>1.4.1. Procedural Programming:</h5>
+                            <p>Procedural programming is a programming paradigm based upon the concept of procedure call. Procedural programming is often a better choice than simple sequential programming in many situations which involve moderate complexity or which require significant ease of maintainability.</p>
+                            <p>Possible benefits: the ability to re-use the same code (function or procedure) at different places, an easier way to keep track of program flow than a collection of "GO TO" or "JUMP" statements.</p>
+                            
+                            <h5>1.4.2. Structured Programming:</h5>
+                            <p>Process of writing a program in small, independent parts. This makes it easier to control a program's development and to design and test its individual component parts.</p>
+                            <p>Structured programs are built up from units called modules, which normally correspond to single procedures or functions.</p>
+                            <p>Can be seen as a subset or sub discipline of procedural programming. It is most famous for removing or reducing reliance on the GO TO statement.</p>
+                            
+                            <h5>1.4.3. Object-Oriented Programming:</h5>
+                            <p>The idea behind OOP is that, a computer program is composed of a collection of individual units, or objects as opposed to traditional view in which a program is a list of instructions to the computer.</p>
+                            <p>Object-oriented programming is claimed to give more flexibility, easing changes to programs. The OOP approach is often simpler to develop and maintain.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.5. Problem solving process and software engineering</h3>
+                            
+                            <h5>1.5.1. Software Engineering:</h5>
+                            <p>Software engineering is the profession that creates and maintains software applications by applying technologies and practices from computer science, project management, engineering, application domain and other fields.</p>
+                            <p>The method used in solving problems in computer science and/or information systems is called the software development life cycle.</p>
+                            <p>The software development life cycle has the following components:</p>
+                            <ul>
+                                <li>Preliminary investigation</li>
+                                <li>Analysis</li>
+                                <li>Design</li>
+                                <li>Implementation</li>
+                                <li>Testing and maintenance</li>
+                            </ul>
+                            
+                            <h5>1.5.2. Problem Solving:</h5>
+                            <p>Problem solving is the process of transforming the description of a problem into the solution by using our knowledge of the problem domain and by relying on our ability to select and use appropriate problem-solving strategies, techniques, and tools.</p>
+                            <p>A problem is an undesirable situation that prevents the organization from fully achieving its purpose, goals and objectives. Or problem can also be defined as the gap between the existing and the desired situation where problem solving will try to fill this gap.</p>
+                            
+                            <p>There are two approaches of problem solving:</p>
+                            <h6>Top down design:</h6>
+                            <p>Is a systematic approach based on the concept that the structure of the problem should determine the structure of the solution and what should be done in lower level. This approach will try to disintegrate a larger problem into more smaller and manageable problems to narrow the problem domain.</p>
+                            
+                            <h6>Bottom up design:</h6>
+                            <p>Is the reverse process where the lowest level component are built first and the system builds up from the bottom until the whole process is finally completed.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.6. Basic Program development tips</h3>
+                            <p>The program we design in any programming language need to be:</p>
+                            <ul>
+                                <li><strong>Reliable:</strong> the program should always do what it is expected to do and handle all types of exception.</li>
+                                <li><strong>Maintainable:</strong> the program should be in a way that it could be modified and upgraded when the need arises.</li>
+                                <li><strong>Portable:</strong> It needs to be possible to adapt the software written for one type of computer to another with minimum modification.</li>
+                                <li><strong>Efficient:</strong> the program should be designed to make optimal use of time, space and other resources of the computer.</li>
                             </ul>
                         </div>
 
-                        <div class="topic-card">
-                            <h2 class="topic-title">1.2 Setting Up Development Environment</h2>
-                            <p>To start programming in C++, you'll need:</p>
-                            
-                            <h5 class="mt-3">For Windows:</h5>
-                            <ol>
-                                <li>Download <a href="https://www.mingw-w64.org/" target="_blank">MinGW</a> compiler</li>
-                                <li>Install an IDE like <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> or <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a></li>
-                                <li>Configure environment variables</li>
-                            </ol>
-                            
-                            <h5 class="mt-3">For Linux:</h5>
-                            <div class="code-example">
-                                <pre><code class="language-bash">sudo apt update
-sudo apt install g++</code></pre>
-                            </div>
-                        </div>
-
-                        <div class="topic-card">
-                            <h2 class="topic-title">1.3 Your First C++ Program</h2>
-                            <p>The traditional "Hello World" program in C++:</p>
-                            
-                            <div class="code-example">
-                                <pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}</code></pre>
-                            </div>
-                            
-                            <h5 class="mt-3">Code Explanation:</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Explanation</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>#include &lt;iostream&gt;</code></td>
-                                        <td>Includes the standard input/output library</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>int main()</code></td>
-                                        <td>Main function where execution begins</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>std::cout</code></td>
-                                        <td>Standard output stream object</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>return 0;</code></td>
-                                        <td>Indicates successful program termination</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="topic-card">
-                            <h2 class="topic-title">1.4 Basic Syntax Elements</h2>
-                            <h5 class="mt-3">Variables and Data Types:</h5>
-                            <div class="code-example">
-                                <pre><code class="language-cpp">int age = 25;               // Integer
-double price = 99.95;       // Floating point
-char grade = 'A';           // Character
-bool is_valid = true;       // Boolean
-std::string name = "John";  // String</code></pre>
-                            </div>
-                            
-                            <h5 class="mt-4">Basic Operators:</h5>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <th>Operator Type</th>
-                                        <th>Examples</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Arithmetic</td>
-                                        <td><code>+ - * / %</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Relational</td>
-                                        <td><code>== != > < >= <=</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Logical</td>
-                                        <td><code>&& || !</code></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-card mt-4">
-                        <h3 class="mb-4"><i class="fas fa-tasks me-2"></i>Chapter Exercises</h3>
-                        <div class="alert alert-primary">
-                            <h5>Exercise 1: Basic Output</h5>
-                            <p>Write a C++ program that displays your name, age, and university on separate lines.</p>
-                            <button class="btn btn-sm btn-primary">Show Solution</button>
-                            <div class="mt-2 solution d-none">
-                                <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;string&gt;
-
-int main() {
-    std::string name = "Your Name";
-    int age = 20;
-    std::string university = "Freshman Academy";
-    
-    std::cout << "Name: " << name << std::endl;
-    std::cout << "Age: " << age << std::endl;
-    std::cout << "University: " << university << std::endl;
-    
-    return 0;
-}</code></pre>
-                            </div>
-                        </div>
-                        
-                        <div class="alert alert-warning">
-                            <h5>Exercise 2: Variable Operations</h5>
-                            <p>Create a program that calculates and displays the sum, difference, product, and quotient of two numbers.</p>
-                            <button class="btn btn-sm btn-warning">Show Solution</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="content-card">
-                        <h3 class="mb-4"><i class="fas fa-bookmark me-2"></i>Chapter Resources</h3>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fas fa-file-pdf me-2"></i>Chapter 1 Slides (PDF)
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fas fa-code me-2"></i>All Code Examples
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fas fa-video me-2"></i>Video Lecture
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="content-card mt-4">
-                        <h3 class="mb-4"><i class="fas fa-question-circle me-2"></i>Quick Quiz</h3>
-                        <div class="quiz-question mb-3">
-                            <p>1. Which of these is NOT a C++ data type?</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1">
-                                <label class="form-check-label">int</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1">
-                                <label class="form-check-label">float</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1">
-                                <label class="form-check-label">string</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" correct>
-                                <label class="form-check-label">number</label>
-                            </div>
-                        </div>
-
-                        <div class="quiz-question mb-3">
-                            <p>2. What is the correct syntax for output in C++?</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2" correct>
-                                <label class="form-check-label">std::cout</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2">
-                                <label class="form-check-label">console.log</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2">
-                                <label class="form-check-label">print()</label>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary w-100">Submit Quiz</button>
-                    </div>
-
-                    <div class="content-card mt-4">
-                        <h3 class="mb-4"><i class="fas fa-arrow-right me-2"></i>Next Chapter Preview</h3>
-                        <div class="alert alert-info">
-                            <h5>Chapter 2: Control Structures</h5>
-                            <p>Learn about decision making and loops in C++</p>
+                        <div class="note-section">
+                            <h3 class="note-title">1.7. Algorithm designing and modeling the logic (using flow chart)</h3>
+                            <p>A digital computer is a useful tool for solving a great variety of problems. A solution to a problem is called an algorithm; it describes the sequence of steps to be performed for the problem to be solved.</p>
+                            <p>Generally, an algorithm is a finite set of well-defined instructions for accomplishing some task which, given an initial state, will terminate in a corresponding recognizable end-state.</p>
+                            <p>The algorithm should be:</p>
                             <ul>
-                                <li>if-else statements</li>
-                                <li>switch-case</li>
-                                <li>for/while loops</li>
+                                <li>Precise and unambiguous</li>
+                                <li>Simple</li>
+                                <li>Correct</li>
+                                <li>Efficient</li>
                             </ul>
-                            <a href="#" class="btn btn-sm btn-info">Preview</a>
+                            
+                            <h5>1.7.1. Modeling a programs logic using flow chart</h5>
+                            <p>Algorithm could be designed using many techniques and tools. One tool of designing algorithm is by using flowcharts. Flowchart is a graphical way of expressing the steps needed to solve a problem.</p>
+                            <p>A flow chart is a schematic (diagrammatic description) representation of a process.</p>
+                            <p>Basic flowcharting symbols are:</p>
+                            <img src="https://via.placeholder.com/600x400?text=Flowchart+Symbols" alt="Flowchart Symbols" class="unit-diagram">
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">8. Compilers and Interpreters</h3>
+                            <p>Any program written in a language other than machine language needs to be translated to machine language. The set of instructions that do this task are known as translators.</p>
+                            <p>There are different kinds of translator software, among which compilers and interpreters are of interest for most programmers.</p>
+                            
+                            <h5>Compilers:</h5>
+                            <p>A compiler is a computer program that translates a series of statements written in source code (a collection of statements in a specific programming language) into a resulting object code (translated instructions of the statements in a programming language). A compiler changes or translates the whole source code into executable machine code (also called object code) which is output to a file for latter execution. E.g. C++, Pascal, FORTRAN, etc.</p>
+                            
+                            <h5>Interpreters:</h5>
+                            <p>Is a computer program that translates a single high level statement and executes it and then goes to the next high level language line etc. E.g. QBASIC, Lisp etc.</p>
+                        </div>
+
+                        <div class="note-section">
+                            <h3 class="note-title">1.9. Mechanics of Creating a program (C++)</h3>
+                            <p>C++ programs typically go through five phases to be executed: these are edit, preprocess, compile, link, load:</p>
+                            
+                            <h5>Edit:</h5>
+                            <p>This is accomplished with an editor program. The programmer types C++ statements with the editor and makes corrections if necessary. The programs source file is then stored on secondary storage device such as a disk with a ".cpp" file name.</p>
+                            <p>After the program is edited, C++ is principally compiled in three phases: preprocessing, translation to object code, and linking (the last two phases are what is generally thought of as the "compilation" process).</p>
+                            
+                            <h5>Preprocess:</h5>
+                            <p>In a C++ system, a preprocessor program executes automatically before the compiler's translation phase begins. The C++ preprocessor obeys command called preprocessor directives, which indicate that certain manipulations are to be performed on the program before compilation. The preprocessor is invoked by the compiler before the program is converted to machine language. The C++ preprocessor goes over the program text and carries out the instructions specified by the preprocessor directives (e.g., #include). The result is a modified program text which no longer contains any directives.</p>
+                            
+                            <h5>Compile:</h5>
+                            <p>Then, the C++ compiler translates the program code. The compiler may be a true C++ compiler which generates native (assembly or machine) code. The outcome may be incomplete due to the program referring to library routines which are not defined as a part of the program. For example, the << operator which is actually defined in a separate IO library.</p>
+                            
+                            <h5>Linking:</h5>
+                            <p>C++ programs typically contain references to functions and data defined else where, such as in the standard libraries. The object code produced by the C++ compiler typically contains "holes" due to these missing parts. A linker links the object code with the code for the missing function to produce an executable image (with no missing pieces). Generally, the linker completes the object code by linking it with the object code of any library modules that the program may have referred to. The final result is an executable file.</p>
+                            
+                            <h5>Loading:</h5>
+                            <p>The loader takes the executable file from disk and transfers it to memory. Additional components from shared libraries that support the program are also loaded. Finally, the computer, under the control of its CPU, executes the program.</p>
+                            
+                            <p>In practice all these steps are usually invoked by a single command and the user will not even see the intermediate files generated.</p>
+                            </ul>
+                        </div>
+
+                        <div class="next-btn-container">
+                            <a href="chapteronecppqueez.html" class="btn btn-primary btn-lg">
+                                Take Queez <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -378,19 +404,5 @@ int main() {
 
     <!-- Bootstrap & JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Highlight.js for syntax highlighting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>
-        // Activate highlight.js
-        hljs.highlightAll();
-        
-        // Toggle exercise solutions
-        document.querySelectorAll('.btn-primary, .btn-warning').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const solution = this.nextElementSibling;
-                solution.classList.toggle('d-none');
-            });
-        });
-    </script>
 </body>
 </html>
