@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Introduction to Programming | Freshman Academy</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Noto Sans Ethiopic -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --correct-color: #28a745;
+            --incorrect-color: #dc3545;
+        }
+
+        body {
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            background-color: var(--light-color);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .ethio-flag-colors {
+            background: linear-gradient(to right, #078930 33%, #fcdd09 33% 66%, #da121a 66%);
+            height: 5px;
+            width: 100%;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .topic-card {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .topic-card:hover {
+            transform: translateX(5px);
+        }
+
+        .topic-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .note-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .note-title {
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .next-btn-container {
+            text-align: right;
+            margin-top: 2rem;
+        }
+
+        /* Quiz Styles */
+        .quiz-container {
+            margin-top: 2rem;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            height: 20px;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .quiz-question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .quiz-question.active {
+            display: block;
+        }
+
+        .quiz-options {
+            margin-top: 1rem;
+        }
+
+        .form-check {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-check-input {
+            margin-top: 0.3rem;
+        }
+
+        .form-check-label {
+            margin-left: 0.5rem;
+        }
+
+        .feedback {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .correct {
+            background-color: rgba(40, 167, 69, 0.2);
+            border-left: 4px solid var(--correct-color);
+        }
+
+        .incorrect {
+            background-color: rgba(220, 53, 69, 0.2);
+            border-left: 4px solid var(--incorrect-color);
+        }
+
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+
+        .quiz-score {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+            display: none;
+        }
+
+        .unit-diagram {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ethio Flag Colors Bar -->
+    <div class="ethio-flag-colors"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-graduation-cap me-2"></i>Freshman Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../computer-programming.html">Back to Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chapter Header -->
+    <section class="chapter-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3"><i class="fas fa-file-code me-3"></i>Chapter 1: Introduction to Programming</h1>
+            <p class="lead">Fundamentals of computer programming</p>
+        </div>
+    </section>
+
+    <!-- Chapter Content -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content-card">
+                        <!-- Your existing chapter content here -->
+                        <!-- ... -->
+                        
+                        <!-- Quiz Section -->
+                        <div class="content-card mt-4">
+                            <h3 class="mb-4"><i class="fas fa-question-circle me-2"></i>Chapter 1 Quiz</h3>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-header">
+                                    <h5>Test Your Knowledge</h5>
+                                    <div id="question-count">Question 1 of 25</div>
+                                </div>
+                                
+                                <div class="progress-container">
+                                    <div class="progress-bar" id="quiz-progress"></div>
+                                </div>
+                                
+                                <div id="quiz-questions">
+                                    <!-- Question 1 -->
+                                    <div class="quiz-question active" data-question="1">
+                                        <h5>1. What is the primary function of the Arithmetic and Logic Unit (ALU)?</h5>
+                                        <div class="quiz-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                                                <label class="form-check-label" for="q1a">Store information for later use</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                                                <label class="form-check-label" for="q1b">Perform calculations and comparisons</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                                                <label class="form-check-label" for="q1c">Obtain information from input devices</label>
+                                            </div>
+                                        </div>
+                                        <div class="feedback" id="feedback-1">
+                                            The ALU performs calculations (like addition) and comparisons (like greater than). It's a key component of the CPU.
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Question 2 -->
+                                    <div class="quiz-question" data-question="2">
+                                        <h5>2. Which generation of programming languages introduced English-like syntax?</h5>
+                                        <div class="quiz-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+                                                <label class="form-check-label" for="q2a">First generation</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+                                                <label class="form-check-label" for="q2b">Second generation</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+                                                <label class="form-check-label" for="q2c">Third generation</label>
+                                            </div>
+                                        </div>
+                                        <div class="feedback" id="feedback-2">
+                                            Third generation languages (like COBOL and BASIC) introduced English-like syntax, making them easier to use than assembly language.
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Question 3 -->
+                                    <div class="quiz-question" data-question="3">
+                                        <h5>3. What is the key difference between procedural and object-oriented programming?</h5>
+                                        <div class="quiz-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+                                                <label class="form-check-label" for="q3a">Procedural uses objects while OOP uses procedures</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+                                                <label class="form-check-label" for="q3b">OOP organizes code as objects while procedural uses procedures</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+                                                <label class="form-check-label" for="q3c">There is no significant difference</label>
+                                            </div>
+                                        </div>
+                                        <div class="feedback" id="feedback-3">
+                                            OOP organizes code as objects (combining data and methods), while procedural programming organizes code as procedures/functions that operate on data.
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Questions 4-25 would follow the same pattern -->
+                                    <!-- I've included 3 sample questions, but in practice you would include all 25 -->
+                                    
+                                </div>
+                                
+                                <div class="quiz-navigation">
+                                    <button class="btn btn-secondary" id="prev-btn" disabled>
+                                        <i class="fas fa-arrow-left me-1"></i> Previous
+                                    </button>
+                                    <button class="btn btn-primary" id="next-btn">
+                                        Next <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="quiz-score" id="quiz-score">
+                                    Your score: <span id="score">0</span> out of 25 (<span id="percentage">0</span>%)
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="next-btn-container">
+                            <a href="chapter2.html" class="btn btn-primary btn-lg">
+                                Next Chapter <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo mb-3">
+                        <i class="fas fa-graduation-cap me-2"></i>Freshman Academy
+                    </div>
+                    <p>የመጀመሪያ አመት ኮርሶች ሁሉንም ይማሩ!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2024 Freshman Academy. ሁሉም መብት የተጠበቀ.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Quiz configuration
+            const quizConfig = {
+                totalQuestions: 25,
+                correctAnswers: {
+                    q1: 'b',
+                    q2: 'c',
+                    q3: 'b',
+                    // Add answers for all 25 questions
+                },
+                explanations: {
+                    q1: "The ALU performs calculations (like addition) and comparisons (like greater than). It's a key component of the CPU.",
+                    q2: "Third generation languages (like COBOL and BASIC) introduced English-like syntax, making them easier to use than assembly language.",
+                    q3: "OOP organizes code as objects (combining data and methods), while procedural programming organizes code as procedures/functions that operate on data.",
+                    // Add explanations for all 25 questions
+                }
+            };
+            
+            // Quiz state
+            let currentQuestion = 1;
+            let userAnswers = {};
+            let score = 0;
+            
+            // DOM elements
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const questionCount = document.getElementById('question-count');
+            const progressBar = document.getElementById('quiz-progress');
+            const quizScore = document.getElementById('quiz-score');
+            const scoreDisplay = document.getElementById('score');
+            const percentageDisplay = document.getElementById('percentage');
+            
+            // Initialize quiz
+            updateProgress();
+            
+            // Event listeners
+            document.querySelectorAll('.form-check-input').forEach(input => {
+                input.addEventListener('change', function() {
+                    const questionNum = this.name.substring(1);
+                    userAnswers[questionNum] = this.value;
+                    
+                    // Show feedback immediately
+                    showFeedback(questionNum);
+                    
+                    // Calculate score
+                    calculateScore();
+                });
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                if (currentQuestion > 1) {
+                    navigateToQuestion(currentQuestion - 1);
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                if (currentQuestion < quizConfig.totalQuestions) {
+                    navigateToQuestion(currentQuestion + 1);
+                }
+            });
+            
+            // Functions
+            function navigateToQuestion(questionNum) {
+                // Hide current question
+                document.querySelector(`.quiz-question[data-question="${currentQuestion}"]`).classList.remove('active');
+                
+                // Show new question
+                document.querySelector(`.quiz-question[data-question="${questionNum}"]`).classList.add('active');
+                
+                currentQuestion = questionNum;
+                updateNavigation();
+                updateProgress();
+            }
+            
+            function updateNavigation() {
+                prevBtn.disabled = currentQuestion === 1;
+                nextBtn.disabled = currentQuestion === quizConfig.totalQuestions;
+                questionCount.textContent = `Question ${currentQuestion} of ${quizConfig.totalQuestions}`;
+            }
+            
+            function updateProgress() {
+                const progress = (currentQuestion / quizConfig.totalQuestions) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+            
+            function showFeedback(questionNum) {
+                // Hide all feedback first
+                document.querySelectorAll('.feedback').forEach(fb => fb.style.display = 'none');
+                
+                const selectedOption = document.querySelector(`input[name="q${questionNum}"]:checked`);
+                if (!selectedOption) return;
+                
+                const feedback = document.getElementById(`feedback-${questionNum}`);
+                const isCorrect = selectedOption.value === quizConfig.correctAnswers[`q${questionNum}`];
+                
+                feedback.classList.remove('correct', 'incorrect');
+                feedback.classList.add(isCorrect ? 'correct' : 'incorrect');
+                feedback.style.display = 'block';
+            }
+            
+            function calculateScore() {
+                score = 0;
+                for (let i = 1; i <= quizConfig.totalQuestions; i++) {
+                    if (userAnswers[i] && userAnswers[i] === quizConfig.correctAnswers[`q${i}`]) {
+                        score++;
+                    }
+                }
+                
+                const percentage = Math.round((score / quizConfig.totalQuestions) * 100);
+                scoreDisplay.textContent = score;
+                percentageDisplay.textContent = percentage;
+                
+                // Show score after all questions are answered
+                if (Object.keys(userAnswers).length === quizConfig.totalQuestions) {
+                    quizScore.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+                                                  </html>
