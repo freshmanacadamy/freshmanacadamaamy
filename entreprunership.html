@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Course | Freshman Academy</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Noto Sans Ethiopic -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --dark-color: #34495e;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            background-color: var(--light-color);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .ethio-flag-colors {
+            background: linear-gradient(to right, #078930 33%, #fcdd09 33% 66%, #da121a 66%);
+            height: 5px;
+            width: 100%;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .chapter-card {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateX(5px);
+        }
+
+        .chapter-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .concept-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .concept-title {
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Chapter navigation */
+        .chapter-nav {
+            position: sticky;
+            top: 20px;
+        }
+        
+        .chapter-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .chapter-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-list a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-list a:hover, .chapter-list a.active {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: var(--primary-color);
+        }
+
+        .diagram-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ethio Flag Colors Bar -->
+    <div class="ethio-flag-colors"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-graduation-cap me-2"></i>Freshman Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../courses.html">All Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <section class="course-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3"><i class="fas fa-lightbulb me-3"></i>Entrepreneurship</h1>
+            <p class="lead">Developing the mindset and skills for successful business ventures</p>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="chapter-nav">
+                        <div class="content-card">
+                            <h4 class="mb-3">Course Chapters</h4>
+                            <ul class="chapter-list">
+                                <li><a href="entrepreneurship-chapter1.html" class="active">1. The Nature of Entrepreneurship</a></li>
+                                <li><a href="entrepreneurship-chapter2.html">2. Business Planning</a></li>
+                                <li><a href="entrepreneurship-chapter3.html">3. Business Formation</a></li>
+                                <li><a href="entrepreneurship-chapter4.html">4. Product/Service Development</a></li>
+                                <li><a href="entrepreneurship-chapter5.html">5. Marketing</a></li>
+                                <li><a href="entrepreneurship-chapter6.html">6. Business Financing</a></li>
+                                <li><a href="entrepreneurship-chapter7.html">7. Managing Growth and Transition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-9">
+                    <div class="content-card">
+                        <!-- Current Chapter Content -->
+                        <div class="chapter-card">
+                            <h2 class="chapter-title">The Nature of Entrepreneurship</h2>
+                            
+                            <div class="concept-section">
+                                <h4 class="concept-title">What is Entrepreneurship?</h4>
+                                <p>Entrepreneurship is the process of creating, developing, and managing a new business venture to achieve financial success while accepting the associated risks.</p>
+                                <img src="https://via.placeholder.com/600x300?text=Entrepreneurship+Process" alt="Entrepreneurship Process" class="diagram-img">
+                            </div>
+                            
+                            <div class="concept-section">
+                                <h4 class="concept-title">Key Characteristics of Entrepreneurs</h4>
+                                <ul>
+                                    <li><strong>Innovation:</strong> Developing new ideas or improving existing ones</li>
+                                    <li><strong>Risk-taking:</strong> Willingness to face uncertainty</li>
+                                    <li><strong>Vision:</strong> Clear picture of what they want to achieve</li>
+                                    <li><strong>Persistence:</strong> Determination to overcome obstacles</li>
+                                    <li><strong>Adaptability:</strong> Ability to adjust to changing circumstances</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-section">
+                                <h4 class="concept-title">Types of Entrepreneurs</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                                <th>Example</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Small Business</td>
+                                                <td>Local operations with limited growth</td>
+                                                <td>Grocery store, restaurant</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Scalable Startup</td>
+                                                <td>Designed for rapid growth</td>
+                                                <td>Tech companies</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Social</td>
+                                                <td>Focus on solving social problems</td>
+                                                <td>Non-profits, social enterprises</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="../../index.html" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back to Home
+                            </a>
+                            <a href="entrepreneurship-chapter2.html" class="btn btn-primary">
+                                Next Chapter <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo mb-3">
+                        <i class="fas fa-graduation-cap me-2"></i>Freshman Academy
+                    </div>
+                    <p>የመጀመሪያ አመት ኮርሶች ሁሉንም ይማሩ!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2024 Freshman Academy. ሁሉም መብት የተጠበቀ.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Highlight current chapter in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.chapter-list a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
